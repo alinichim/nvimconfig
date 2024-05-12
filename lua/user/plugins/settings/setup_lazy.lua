@@ -26,7 +26,11 @@ local core_plugins = {
     { "nvim-treesitter/nvim-treesitter", name = "treesitter", lazy = false },
     { "williamboman/mason.nvim", name = "mason", build = ":MasonUpdate" },
     { "neovim/nvim-lspconfig", name = "lspconfig", lazy = false },
-    { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+    { "nvim-telescope/telescope.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
 }
 -- Additional plugins
 local additional_plugins = {
@@ -35,7 +39,9 @@ local additional_plugins = {
     { "hrsh7th/cmp-path", name = "cmp-path" },
     { "hrsh7th/cmp-cmdline", name = "cmp-cmdline" },
     { "hrsh7th/nvim-cmp", name = "nvim-cmp" },
-    { "Exafunction/codeium.vim" },
+    { 'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+    },
 }
 -- Colorschemes
 local colorschemes = {
@@ -46,6 +52,7 @@ local colorschemes = {
     { "folke/tokyonight.nvim", priority = 1000 },
     { "arcticicestudio/nord-vim", priority = 1000 },
     { "olivercederborg/poimandres.nvim", priority = 1000 },
+    { "EdenEast/nightfox.nvim", priority = 1000 },
 }
 local plugins = { }
 plugins = join(plugins, core_plugins)

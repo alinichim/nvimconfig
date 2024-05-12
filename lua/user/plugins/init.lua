@@ -6,4 +6,5 @@ require("user.plugins.settings.setup_nvim-treesitter")
 require("user.plugins.settings.setup_nvim-lspconfig")
 require("user.plugins.settings.setup_mason")
 require("user.plugins.settings.setup_nvim-cmp")
+require("user.plugins.settings.setup_lualine")
 
